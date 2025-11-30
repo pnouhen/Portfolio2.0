@@ -1,0 +1,6 @@
+@use "./mixins" as *;
+
+#projects {
+    height: 50rem;
+  @include gridColumsOtherSection;
+}

@@ -4,7 +4,15 @@
     gap: 1.25rem;
 }
 
-@mixin fontSizeText {
+@mixin gridColumsOtherSection {
+   grid-column: 4/10;
+
+@media (max-width: 768px) {
+    grid-column: 2/12;
+}
+}
+
+@mixin fontColorText {
      &.dark-mode {
       color: #c1c1c1;
     }
@@ -12,4 +20,12 @@
     &.light-mode {
       color: #050505;
     }
+}
+
+@mixin fontFamilyOtherText {
+  font-family: "Inter";
+}
+
+@mixin fontSizeOtherText {
+  font-size: 1.25rem;
 }

@@ -1,6 +1,8 @@
 const header = document.getElementById("header");
 const nav = document.getElementById("nav");
-  const imgBurger = document.createElement("img");
+const imgBurger = document.createElement("img");
+
+const links = document.querySelectorAll("nav li a");
 
 if (window.innerWidth <= 768) {
   imgBurger.src = "/assets/icons/header/bars-solid-white.svg";
@@ -8,25 +10,33 @@ if (window.innerWidth <= 768) {
   imgBurger.classList = "menuBurger";
   header.appendChild(imgBurger);
 
+  const hiddenNav = () => {
+    nav.classList.remove("active");
+
+    setTimeout(() => {
+      nav.style.visibility = "hidden";
+    }, 400);
+  };
+
   imgBurger.addEventListener("click", () => {
     if (nav.classList.contains("active")) {
-      nav.classList.remove("active");
-
-      setTimeout(() => {
-        nav.style.visibility = "hidden";
-      }, 400);
+      hiddenNav();
     } else {
       nav.style.visibility = "visible";
 
       nav.classList.add("active");
     }
   });
+
+  links.forEach((link) => {
+    link.addEventListener("click", hiddenNav);
+  });
 }
 
 export const darkModeMenuBurger = () => {
   imgBurger.src = "/assets/icons/header/bars-solid-white.svg";
-}
+};
 
 export const lightModeMenuBurger = () => {
   imgBurger.src = "/assets/icons/header/bars-solid-black.svg";
-}
+};

@@ -21,6 +21,7 @@
 
   @media (max-width: 1024px) {
     grid-column: 1/13;
+    @include layout;
   }
 
   img {
@@ -29,10 +30,15 @@
     border-radius: 20%;
   }
 
+  h1, p, img, a {
+    @media (max-width: 1024px) {
+    grid-column: 1/13;
+    margin: auto;
+  }}
+
   h1,
   p {
     font-family: "Poppins";
-    text-align: center;
   }
 
   h1 {
@@ -42,7 +48,7 @@
 
   h1,
   .catchphrase {
-    @include fontSizeText;
+    @include fontColorText;
   }
 
   .job {
@@ -70,11 +76,11 @@
 
   .catchphrase {
     width: 35rem;
-    font-size: 1.25rem;
-    line-height: 1.5;
+    @include fontSizeOtherText;
 
     @media (max-width: 768px) {
-      width: 21rem;
+      width: 100%;
+    grid-column: 2/12;
     }
   }
 

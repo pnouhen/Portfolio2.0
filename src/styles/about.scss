@@ -1,4 +1,11 @@
+@use "./mixins" as *;
+
 .about {
-    grid-column: 1/13;
-    height: 50rem;
+ @include gridColumsOtherSection;
+
+  p {
+    @include fontColorText;
+    @include fontFamilyOtherText;
+    @include fontSizeOtherText;
+  }
 }
