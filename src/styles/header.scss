@@ -1,0 +1,101 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+header {
+  position: fixed;
+  top: 0;
+  left: 7.5rem;
+  right: 7.5rem;
+  padding-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &.dark-mode {
+    background-color: $background-dark;
+  }
+
+  &.light-mode {
+    background-color: $background-light;
+  }
+
+  @media (max-width: 768px) {
+    left: 2rem;
+    right: 2rem;
+  }
+
+  .logo {
+    font-family: "Oleo Script", system-ui;
+    font-size: 2rem;
+
+    &.dark-mode {
+      color: white;
+    }
+
+    &.light-mode {
+      color: black;
+    }
+  }
+
+  nav {
+    @media (max-width: 768px) {
+      position: absolute;
+      bottom: -4rem;
+      order: -1;
+      width: 100%;
+      visibility: hidden;
+      opacity: 0;
+      transform: translateY(-3rem);
+      transition: opacity 0.4s ease, transform 0.4s ease;
+
+      &.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    ul {
+      display: flex;
+      gap: 3rem;
+
+      @media (max-width: 768px) {
+        position: absolute;
+        top: -3rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+      }
+
+      li {
+        list-style: none;
+        a {
+          text-align: center;
+          font-size: 1.125rem;
+          font-weight: 500;
+          text-decoration: none;
+
+          &.active {
+            font-weight: 600;
+            color: #4fc3f7;
+          }
+        }
+      }
+    }
+  }
+
+  img {
+    height: 2rem;
+    width: 2rem;
+    cursor: pointer;
+  }
+
+  img,
+  a {
+    @include fontSizeText;
+  }
+
+  .toggle-theme {
+    @media (max-width: 768px) {
+      order: 1;
+    }
+  }
+}

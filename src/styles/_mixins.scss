@@ -1,0 +1,15 @@
+@mixin layout {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1.25rem;
+}
+
+@mixin fontSizeText {
+     &.dark-mode {
+      color: #c1c1c1;
+    }
+
+    &.light-mode {
+      color: #050505;
+    }
+}

@@ -1,8 +1,8 @@
 const header = document.getElementById("header");
 const nav = document.getElementById("nav");
+  const imgBurger = document.createElement("img");
 
 if (window.innerWidth <= 768) {
-  const imgBurger = document.createElement("img");
   imgBurger.src = "/assets/icons/header/bars-solid-white.svg";
   imgBurger.alt = "Menu";
   imgBurger.classList = "menuBurger";
@@ -21,4 +21,12 @@ if (window.innerWidth <= 768) {
       nav.classList.add("active");
     }
   });
+}
+
+export const darkModeMenuBurger = () => {
+  imgBurger.src = "/assets/icons/header/bars-solid-white.svg";
+}
+
+export const lightModeMenuBurger = () => {
+  imgBurger.src = "/assets/icons/header/bars-solid-black.svg";
 }

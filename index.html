@@ -12,25 +12,25 @@
     <title>Portfolio de Pierre Nouhen</title>
   </head>
   <body class="dark-mode">
-    <header id="header">
+    <header id="header" class="dark-mode">
       <p class="logo dark-mode">Pierre</p>
 
       <nav id="nav">
         <ul>
           <li class="dark-mode">
-            <a>Accueil</a>
+            <a class="dark-mode active" href="#home">Accueil</a>
           </li>
 
           <li class="dark-mode">
-            <a>À propos</a>
+            <a class="dark-mode" href="#about">À propos</a>
           </li>
 
           <li class="dark-mode">
-            <a>Projets</a>
+            <a class="dark-mode">Projets</a>
           </li>
 
           <li class="dark-mode">
-            <a>Compétences techniques</a>
+            <a class="dark-mode">Compétences techniques</a>
           </li>
         </ul>
       </nav>
@@ -42,6 +42,32 @@
         title="Passer au thème clair"
       />
     </header>
+
+    <main>
+      <section id="home" class="home dark-mode">
+        <img src="/assets/img/profil-picture.webp" alt="" />
+
+        <h1 class="dark-mode">Pierre Nouhen</h1>
+
+        <p class="job dark-mode">Developpeur web</p>
+
+        <p class="catchphrase dark-mode">
+          Développeur web récemment reconverti, je conçois et implémente des
+          applications web complètes, en alliant performance et ergonomie.
+          Motivé à rejoindre une équipe pour créer des solutions innovantes.
+        </p>
+
+        <a class="dark-mode"
+        class="dark-mode"
+          href="/assets/CV/CV_Pierre_NOUHEN_Developpeur_web.pdf"
+          rel="noopener noreferrer"
+        > Consulter mon CV</a>
+      </section>
+
+      <section id="about" class="about">
+        <h2>A propos</h2>
+      </section>
+    </main>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>

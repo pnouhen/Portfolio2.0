@@ -1,3 +1,6 @@
+@use "./mixins" as *;
+@use "./variables" as *;
+
 * {
   margin: 0;
   padding: 0;
@@ -21,103 +24,23 @@
 }
 
 body {
-  padding: 3rem 7.5rem;
+  padding: 0 7.5rem;
 
   @media (max-width: 768px) {
-    padding: 3rem 2rem;
+    padding: 0 2rem;
   }
 
   &.dark-mode {
-    background-color: #1a1a1a;
+    background-color: $background-dark;
   }
 
   &.light-mode {
-    background-color: #e0e8f6;
+    background-color: $background-light;
   }
 }
 
-header {
-  position: fixed;
-  left: 7.5rem;
-  right: 7.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  @media (max-width: 768px) {
-    left: 2rem;
-    right: 2rem;
-  }
-
-  .logo {
-    font-family: "Oleo Script", system-ui;
-    font-size: 2rem;
-
-    &.dark-mode {
-      color: white;
-    }
-
-    &.light-mode {
-      color: black;
-    }
-  }
-
-  nav {
-    @media (max-width: 768px) {
-      position: absolute;
-      bottom: -4rem;
-      order: -1;
-      width: 100%;
-      visibility: hidden;
-      opacity: 0;
-      transform: translateY(-3rem);
-      transition: opacity 0.4s ease, transform 0.4s ease;
-
-      &.active {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    ul {
-      display: flex;
-      gap: 3rem;
-
-      @media (max-width: 768px) {
-        position: absolute;
-        top: -3rem;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        align-items: center;
-      }
-
-      li {
-        text-align: center;
-        font-size: 1.125rem;
-        list-style: none;
-      }
-    }
-  }
-
-  img {
-    height: 2rem;
-    width: 2rem;
-    cursor: pointer;
-  }
-
-  img,
-  li {
-    &.dark-mode {
-      color: #c1c1c1;
-    }
-
-    &.light-mode {
-      color: #050505;
-    }
-  }
-
-  .toggle-theme {
-    @media (max-width: 768px) {
-      order: 1;
-    }
-  }
+main {
+  margin-top: 7.8rem;
+  @include layout;
 }
+
