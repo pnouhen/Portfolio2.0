@@ -1,4 +1,5 @@
-import { darkModeMenuBurger, lightModeMenuBurger } from "./menuBurger";
+import { darkModeMenuBurger, lightModeMenuBurger } from "./menuBurger.function";
+import { darkModeImg, lightModeImg } from "./projects.function";
 
 const button = document.querySelector(".toggle-theme");
 const allElements = document.querySelectorAll(".dark-mode");
@@ -20,7 +21,8 @@ button.addEventListener("click", () => {
       element.classList.add("light-mode");
 
       // Functions
-      lightModeMenuBurger()
+      darkModeImg();
+      lightModeMenuBurger();
     } else if (element.classList.contains("light-mode")) {
       // Change button
       button.src = "/assets/icons/header/sun.svg";
@@ -29,9 +31,10 @@ button.addEventListener("click", () => {
 
       element.classList.remove("light-mode");
       element.classList.add("dark-mode");
-      
+
       // Functions
-      darkModeMenuBurger()
+      lightModeImg();
+      darkModeMenuBurger();
     }
   });
 });

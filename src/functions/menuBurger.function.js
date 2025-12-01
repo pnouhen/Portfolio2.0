@@ -4,7 +4,7 @@ const imgBurger = document.createElement("img");
 
 const links = document.querySelectorAll("nav li a");
 
-if (window.innerWidth <= 768) {
+if (window.innerWidth <= 1024) {
   imgBurger.src = "/assets/icons/header/bars-solid-white.svg";
   imgBurger.alt = "Menu";
   imgBurger.classList = "menuBurger";

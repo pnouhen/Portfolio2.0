@@ -1,9 +1,14 @@
 @use "./mixins" as *;
 
 .about {
- @include gridColumsOtherSection;
+  grid-column: 4/10;
+
+  @media (max-width: 768px) {
+    grid-column: 2/12;
+  }
 
   p {
+    text-align: center;
     @include fontColorText;
     @include fontFamilyOtherText;
     @include fontSizeOtherText;

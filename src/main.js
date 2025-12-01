@@ -7,6 +7,7 @@ import "./styles/projects.scss";
 
 
 // JS
-import "./functions/menuBurger"
-import "./functions/toggleTheme"
-import "./functions/navigation"
+import "./functions/projects.function"
+import "./functions/menuBurger.function"
+import "./functions/toggleTheme.function"
+import "./functions/navigation.function"
