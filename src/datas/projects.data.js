@@ -5,6 +5,7 @@ export const projectsData = [
     toggleImg: false,
     title: "Ambrine Nutri",
     description: "Vitrine interactive et boutique de recettes nutrition",
+    stack: "full-stack",
     linkWebSite: "https://pierrenouhen-ambrine-nutri.vercel.app/",
     linkGitHub: "https://github.com/pnouhen/AmbrineNutri",
     details: [
@@ -60,6 +61,7 @@ export const projectsData = [
     img: "/assets/projects/img/portfolio-light-mode.webp",
     toggleImg: true,
     title: "Mon Portfolio",
+    stack: "front-end",
     description: "Site interactif moderne avec Dark/Light toggle",
     linkWebSite: "https://pierre-nouhen-portfolio.vercel.app/",
     linkGitHub: "",
@@ -92,6 +94,7 @@ export const projectsData = [
     toggleImg: false,
     title: "Réserves Naturelles France",
     description: "Carte dynamique avec filtres et détails",
+    stack: "front-end",
     linkWebSite: "https://pierre-nouhen-create-map-interactive.vercel.app/",
     linkGitHub: "https://github.com/pnouhen/Create-Map-Interactive",
     details: [

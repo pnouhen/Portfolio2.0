@@ -3,7 +3,7 @@ import { projectModalContainer } from "./project-modal-container.function";
 import { darkMode, lightMode, toggleTheme } from "./toggleTheme.function";
 
 const project = document.getElementById("projects");
-const buttons = project.querySelectorAll("button");
+const buttons = project.querySelectorAll(".details");
 
 buttons.forEach((button) => {
   button.addEventListener("click", () => {
@@ -27,11 +27,11 @@ buttons.forEach((button) => {
     modal.appendChild(modalContainer);
 
     projectModalContainer(modal, modalContainer, toggleTheme, data);
- 
- // Toggle theme
+
+    // Toggle theme
     const buttonToggleTheme = document.querySelector(".toggle-theme");
     const allElements = modal.querySelectorAll(`.${toggleTheme}`);
-    const closeModalImg = document.querySelector(".close-modal img")
+    const closeModalImg = document.querySelector(".close-modal img");
     buttonToggleTheme.addEventListener("click", () => {
       allElements.forEach((element) => {
         if (toggleTheme === "dark-mode") {
@@ -46,12 +46,8 @@ buttons.forEach((button) => {
 
           // Close Modal
           closeModalImg.src = "/assets/projects/icons/close-light-mode.svg";
-          console.log(closeModalImg)
-
         }
       });
     });
   });
-
-  
 });
