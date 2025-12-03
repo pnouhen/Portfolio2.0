@@ -11,13 +11,7 @@ header {
   align-items: center;
   justify-content: space-between;
 
-  &.dark-mode {
-    background-color: $background-dark;
-  }
-
-  &.light-mode {
-    background-color: $background-light;
-  }
+  @include backgroundMode;
 
   @media (max-width: 1024px) {
     left: 2rem;

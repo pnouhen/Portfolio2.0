@@ -28,19 +28,8 @@ html {
 }
 
 body {
-  padding: 0 7.5rem;
-
-  @media (max-width: 768px) {
-    padding: 0 2rem;
-  }
-
-  &.dark-mode {
-    background-color: $background-dark;
-  }
-
-  &.light-mode {
-    background-color: $background-light;
-  }
+  @include paddingBody;
+  @include backgroundMode;
 }
 
 main {

@@ -1,7 +1,27 @@
+@use './variables' as *;
+
 @mixin layout {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 1.25rem;
+}
+
+@mixin backgroundMode {
+  &.dark-mode {
+    background-color: $background-dark;
+  }
+
+  &.light-mode {
+    background-color: $background-light;
+  }
+}
+
+@mixin paddingBody {
+  padding: 0 $padding-body;
+
+  @media (max-width: 768px) {
+    padding: 0 $padding-body-mobile;
+  }
 }
 
 @mixin fontColorText {

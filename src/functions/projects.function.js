@@ -4,8 +4,7 @@ const section = document.getElementById("projects");
 
 projectsData.forEach((project) => {
   const article = document.createElement("article");
-  const id = project.title.replace(/\s+/g, "-");
-  article.id = id;
+  article.id = project.id;
   section.appendChild(article);
 
   const imgProject = document.createElement("img");
@@ -48,7 +47,7 @@ projectsData.forEach((project) => {
   linkDiv.appendChild(linkGitHub);
 
   const imgLinkGitHub = document.createElement("img");
-  imgLinkGitHub.src = "/assets/soft-skills/github.svg";
+  imgLinkGitHub.src = "/assets/soft-skills/outils/github.svg";
   const textimgLinkGitHub = `Acceder au GitHub : ${project.title}`;
   imgLinkGitHub.alt = textimgLinkGitHub;
   imgLinkGitHub.classList.add("dark-mode");
@@ -57,6 +56,7 @@ projectsData.forEach((project) => {
 
   // Link for more details
   const details = document.createElement("button");
+  details.dataset.id = project.id;
   details.classList.add("dark-mode");
   details.textContent = "En savoir plus";
   linkDiv.appendChild(details);
@@ -68,8 +68,7 @@ export const darkModeImg = () => {
   );
 
   toogleImg.forEach((project) => {
-    const id = project.title.replace(/\s+/g, "-");
-    const img = document.querySelector(`#${id} .imgProject`);
+    const img = document.querySelector(`#${project.id} .imgProject`);
     img.src = project.img.replace("light-mode", "dark-mode");
   });
 };
@@ -80,8 +79,7 @@ export const lightModeImg = () => {
   );
 
   toogleImg.forEach((project) => {
-    const id = project.title.replace(/\s+/g, "-");
-    const img = document.querySelector(`#${id} .imgProject`);
+    const img = document.querySelector(`#${project.id} .imgProject`);
     img.src = project.img.replace("dark-mode", "light-mode");
   });
 };
