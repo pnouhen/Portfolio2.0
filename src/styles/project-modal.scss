@@ -32,13 +32,11 @@
     flex-direction: column;
 
     @media (max-width: 1024px) {
-          grid-column: 2/12;
-
+      grid-column: 2/12;
     }
 
-     @media (max-width: 768px) {
-          grid-column: 1/13;
-
+    @media (max-width: 768px) {
+      grid-column: 1/13;
     }
 
     &.dark-mode {
@@ -117,7 +115,11 @@
           list-style: none;
 
           img {
-            height: 2rem;
+            height: 4rem;
+
+            @media (max-width: 768px) {
+              height: 2rem;
+            }
           }
         }
 

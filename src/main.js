@@ -9,6 +9,7 @@ import "./styles/skills.scss"
 
 // JS
 import "./functions/project-filter.function"
+import "./functions/skills.functions"
 import "./functions/menuBurger.function"
 import "./functions/navigation.function"
 import "./functions/toggleTheme.function"

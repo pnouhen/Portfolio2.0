@@ -1,5 +1,52 @@
+@use "./mixins" as *;
+
 #skills {
   grid-column: 2/12;
 
-  
+  h2 {
+    margin-bottom: 4rem;
+  }
+
+  article {
+    margin-bottom: 3rem;
+    h3 {
+      width: 100%;
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+      @include fontFamilyOtherText;
+    }
+
+    h3,
+    img {
+      @include fontColorText;
+    }
+
+    ul {
+      margin-top: 2rem;
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      column-gap: 4rem;
+      row-gap: 3rem;
+      li {
+        img {
+          height: 5rem;
+          width: auto;
+
+          @media (max-width: 768px) {
+            height: 3rem;
+          }
+        }
+
+        .rest-api,
+        .github,
+        .express-js {
+          padding: 0.25rem;
+          background-color: white;
+        }
+      }
+    }
+  }
 }

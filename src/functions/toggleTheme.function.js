@@ -31,7 +31,7 @@ button.addEventListener("click", (e) => {
       toggleTheme = "light-mode";
 
       // Change button
-      button.src = "/assets/icons/header/moon.svg";
+      button.src = "/assets/header/moon.svg";
       button.alt = "Lune";
       button.title = "Passer au thème sombre";
 
@@ -45,7 +45,7 @@ button.addEventListener("click", (e) => {
       toggleTheme = "dark-mode";
 
       // Change button
-      button.src = "/assets/icons/header/sun.svg";
+      button.src = "/assets/header/sun.svg";
       button.alt = "Soleil";
       button.title = "Passer au thème clair";
 
