@@ -2,6 +2,7 @@ import { projectsData } from "../datas/projects.data";
 import { projectModalContainer } from "./project-modal-container.function";
 import { darkMode, lightMode, toggleTheme } from "./toggleTheme.function";
 
+export function displayModal() {
 const project = document.getElementById("projects");
 const buttons = project.querySelectorAll(".details");
 
@@ -51,3 +52,5 @@ buttons.forEach((button) => {
     });
   });
 });
+}
+

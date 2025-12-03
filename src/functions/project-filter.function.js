@@ -1,9 +1,14 @@
 import { projectsData } from "../datas/projects.data";
+import { displayModal } from "./project-modal.function";
 import { displayProjects } from "./projects.function";
+
+     export let projectsFilter = projectsData;
 
 const filters = document.querySelectorAll("button");
 
+// Initialization
 displayProjects(projectsData);
+displayModal()
 
 filters.forEach((filter) => {
   filter.addEventListener("click", () => {
@@ -14,7 +19,6 @@ filters.forEach((filter) => {
         .forEach((el) => el.classList.remove("active"));
 
       // Filter project
-      let projectsFilter = projectsData;
       const stacks = ["front-end", "full-stack"];
 
       stacks.forEach((category) => {
@@ -26,6 +30,7 @@ filters.forEach((filter) => {
       });
 
       displayProjects(projectsFilter);
+      displayModal()
     }
   });
 });

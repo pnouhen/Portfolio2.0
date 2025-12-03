@@ -1,10 +1,11 @@
 import { darkModeMenuBurger, lightModeMenuBurger } from "./menuBurger.function";
-import { darkModeImg, lightModeImg } from "./projects.function";
+import { projectsFilter } from "./project-filter.function";
+import { darkModeImg, displayProjects, lightModeImg } from "./projects.function";
 
 const button = document.querySelector(".toggle-theme");
 const allElements = document.querySelectorAll(".dark-mode");
 
-export let toggleTheme = "dark-mode"
+export let toggleTheme = "dark-mode";
 
 export function lightMode(element) {
   element.style.transition = "all 0.4s ease-in-out";
@@ -27,7 +28,7 @@ button.addEventListener("click", (e) => {
     button.style.transition = "all 0.4s ease-in-out";
 
     if (element.classList.contains("dark-mode")) {
-      toggleTheme = "light-mode"
+      toggleTheme = "light-mode";
 
       // Change button
       button.src = "/assets/icons/header/moon.svg";
@@ -36,11 +37,12 @@ button.addEventListener("click", (e) => {
 
       lightMode(element);
 
-      // Functions
+      // Other functions
       darkModeImg();
       lightModeMenuBurger();
+      displayProjects(projectsFilter);
     } else if (element.classList.contains("light-mode")) {
-      toggleTheme = "dark-mode"
+      toggleTheme = "dark-mode";
 
       // Change button
       button.src = "/assets/icons/header/sun.svg";
@@ -49,9 +51,10 @@ button.addEventListener("click", (e) => {
 
       darkMode(element);
 
-      // Functions
+      // Other functions
       lightModeImg();
       darkModeMenuBurger();
+      displayProjects(projectsFilter);
     }
   });
 });
