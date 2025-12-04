@@ -30,11 +30,25 @@
       row-gap: 3rem;
 
       @media (max-width: 768px) {
-              grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 1fr);
       }
-      
+
       li {
-        @include skills;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          width: 3.37rem;
+          max-width: 100%;
+          height: 3rem;
+          object-fit: contain;
+
+          @media (max-width: 768px) {
+            width: 3.33rem;
+            height: 2rem;
+          }
+        }
       }
     }
   }

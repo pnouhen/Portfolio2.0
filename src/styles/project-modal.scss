@@ -115,7 +115,20 @@
           list-style: none;
 
           li {
-            @include skills;
+            img {
+              width: auto;
+              max-width: 100%;
+              height: 2rem;
+              object-fit: contain;
+
+              @media (max-width: 1024px) {
+                height: 1.875rem;
+              }
+
+              @media (max-width: 768px) {
+                height: 1.5rem;
+              }
+            }
           }
         }
 

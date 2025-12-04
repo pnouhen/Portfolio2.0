@@ -26,14 +26,6 @@ export const softSkillsData = [
   },
 
   {
-    title: "Outils",
-    skills: [
-      { img: "/assets/soft-skills/outils/git.svg", name: "Git" },
-      { img: "/assets/soft-skills/outils/github.svg", name: "GitHub" },
-    ],
-  },
-
-  {
     title: "Back-end",
     skills: [
       { img: "/assets/soft-skills/back-end/node-js.svg", name: "Node.js" },
@@ -42,6 +34,14 @@ export const softSkillsData = [
         name: "Express.js",
       },
       { img: "/assets/soft-skills/back-end/mongodb.svg", name: "MongoDB" },
+    ],
+  },
+
+  {
+    title: "Outils",
+    skills: [
+      { img: "/assets/soft-skills/outils/git.svg", name: "Git" },
+      { img: "/assets/soft-skills/outils/github.svg", name: "GitHub" },
     ],
   },
 ];

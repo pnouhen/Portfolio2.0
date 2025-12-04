@@ -4,8 +4,9 @@
 header {
   position: fixed;
   top: 0;
-  left: 7.5rem;
-  right: 7.5rem;
+  left: $padding-body;
+  right: $padding-body;
+  z-index: 9999;
   padding-top: 2rem;
   padding-bottom: 0.25rem;
   display: flex;
@@ -15,10 +16,9 @@ header {
   @include backgroundMode;
 
   @media (max-width: 1024px) {
-    left: 2rem;
-    right: 2rem;
-      padding-bottom: 0.5rem;
-
+    left: $padding-body-mobile;
+    right: $padding-body-mobile;
+    padding-bottom: 0.5rem;
   }
 
   .logo {
