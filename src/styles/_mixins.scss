@@ -1,9 +1,9 @@
-@use './variables' as *;
+@use "./variables" as *;
 
 @mixin layout {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 1.25rem;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.25rem;
 }
 
 @mixin backgroundMode {
@@ -25,13 +25,13 @@
 }
 
 @mixin fontColorText {
-     &.dark-mode {
-      color: #c1c1c1;
-    }
+  &.dark-mode {
+    color: #c1c1c1;
+  }
 
-    &.light-mode {
-      color: #050505;
-    }
+  &.light-mode {
+    color: #050505;
+  }
 }
 
 @mixin fontFamilyOtherText {
@@ -42,8 +42,23 @@
   font-size: 1.25rem;
 }
 
-@mixin widthSkills {
-  width: auto;
-  max-width: 100%;
-  object-fit: contain;
+@mixin skills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: auto;
+    max-width: 100%;
+    height: 2rem;
+    object-fit: contain;
+
+    @media (max-width: 1024px) {
+      height: 1.875rem;
+    }
+
+    @media (max-width: 768px) {
+      height: 1.5rem;
+    }
+  }
 }

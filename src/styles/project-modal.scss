@@ -114,13 +114,8 @@
           row-gap: 2rem;
           list-style: none;
 
-          img {
-            height: 4rem;
-            @include widthSkills;
-
-            @media (max-width: 768px) {
-              height: 3rem;
-            }
+          li {
+            @include skills;
           }
         }
 
