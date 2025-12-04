@@ -26,8 +26,9 @@ export function closeModal(modal, container, toggleTheme) {
   };
 
   img.addEventListener("click", close);
-  modal.addEventListener("click", close);
   header.addEventListener("click", close);
+
+  if (window.innerWidth >= 768) modal.addEventListener("click", close);
 
   container.addEventListener("click", (e) => e.stopPropagation());
 }

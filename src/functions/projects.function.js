@@ -22,7 +22,7 @@ export function displayProjects(projects) {
 
     // Text
     const text = document.createElement("p");
-    text.classList.add(toggleTheme);
+    text.classList.add("text",toggleTheme);
     const strong = document.createElement("strong");
     strong.textContent = project.title;
     text.appendChild(strong);

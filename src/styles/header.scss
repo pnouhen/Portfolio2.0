@@ -17,6 +17,8 @@ header {
   @media (max-width: 1024px) {
     left: 2rem;
     right: 2rem;
+      padding-bottom: 0.5rem;
+
   }
 
   .logo {
@@ -97,8 +99,8 @@ header {
     @include fontColorText;
   }
 
-  .toggle-theme {
-    @media (max-width: 768px) {
+  .menuBurger {
+    @media (max-width: 1024px) {
       order: 1;
     }
   }
