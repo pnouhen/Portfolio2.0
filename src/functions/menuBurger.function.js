@@ -8,6 +8,7 @@ if (window.innerWidth <= 1024) {
   imgBurger.src = "/assets/header/bars-solid-white.svg";
   imgBurger.alt = "Menu";
   imgBurger.classList = "menuBurger";
+  imgBurger.loading = "lazy";
   header.appendChild(imgBurger);
 
   const hiddenNav = () => {

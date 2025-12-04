@@ -26,6 +26,7 @@ softSkillsData.forEach((category) => {
     img.alt = `Icone de : ${skill.name}`;
     img.title = skill.name;
     img.classList.add("dark-mode");
+    img.loading="lazy"
     li.appendChild(img);
   });
 });

@@ -18,6 +18,7 @@ export function displayProjects(projects) {
     imgProject.classList.add("imgProject", toggleThemeClass);
     imgProject.src = project.img;
     imgProject.alt = `Illustration de ${project.title}`;
+    imgProject.loading="lazy"
     article.appendChild(imgProject);
 
     // Text
@@ -54,6 +55,7 @@ export function displayProjects(projects) {
     imgLinkWebSite.alt = textimgLinkWebSite;
     imgLinkWebSite.classList.add(toggleThemeClass);
     imgLinkWebSite.title = textimgLinkWebSite;
+    imgLinkWebSite.loading="lazy"
     linkWebsite.appendChild(imgLinkWebSite);
 
     // Link for GitHub
@@ -69,6 +71,7 @@ export function displayProjects(projects) {
     imgLinkGitHub.alt = textimgLinkGitHub;
     imgLinkGitHub.classList.add(toggleThemeClass);
     imgLinkGitHub.title = textimgLinkGitHub;
+    imgLinkGitHub.loading="lazy"
     linkGitHub.appendChild(imgLinkGitHub);
 
     // Link for more details
