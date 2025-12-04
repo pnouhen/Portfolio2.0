@@ -24,11 +24,15 @@
 
     ul {
       margin-top: 2rem;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      display: grid;
+      grid-template-columns: repeat(9, 1fr);
       column-gap: 4rem;
       row-gap: 3rem;
+
+      @media (max-width: 768px) {
+              grid-template-columns: repeat(3, 1fr);
+      }
+      
       li {
         @include skills;
       }

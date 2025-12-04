@@ -1,60 +1,78 @@
-import { darkModeMenuBurger, lightModeMenuBurger } from "./menuBurger.function";
+import { toggleModeMenuBurger } from "./menuBurger.function";
 import { projectsFilter } from "./project-filter.function";
-import { darkModeImg, displayProjects, lightModeImg } from "./projects.function";
+import { displayModal } from "./project-modal.function";
+import { displayProjects, toggleModeImg } from "./projects.function";
 
 const button = document.querySelector(".toggle-theme");
-const allElements = document.querySelectorAll(".dark-mode");
+const linkedin = document.querySelector(".linkedin img");
 
-export let toggleTheme = "dark-mode";
+let modeTheme = ".dark-mode";
 
-export function lightMode(element) {
+export let toggleThemeClass = "dark-mode";
+
+export function toggleTheme(element, remove, add) {
   element.style.transition = "all 0.4s ease-in-out";
-  element.classList.remove("dark-mode");
-  element.classList.add("light-mode");
-}
-
-export function darkMode(element) {
-  element.style.transition = "all 0.4s ease-in-out";
-  element.classList.remove("light-mode");
-  element.classList.add("dark-mode");
+  element.classList.remove(remove);
+  element.classList.add(add);
 }
 
 button.addEventListener("click", (e) => {
   e.stopPropagation();
+
+  const allElements = document.querySelectorAll(modeTheme);
+
+  modeTheme = modeTheme === ".dark-mode" ? ".light-mode" : ".dark-mode";
 
   // Change mode for all elements
   allElements.forEach((element) => {
     // To avoid the transition when the page loads
     button.style.transition = "all 0.4s ease-in-out";
 
+    const toggleImg = (img, src, alt, title) => {
+      img.src = src;
+      if (alt) img.alt = alt;
+      if (title) img.title = title;
+    };
+
     if (element.classList.contains("dark-mode")) {
-      toggleTheme = "light-mode";
+      toggleThemeClass = "light-mode";
 
-      // Change button
-      button.src = "/assets/header/moon.svg";
-      button.alt = "Lune";
-      button.title = "Passer au thème sombre";
+      // Change img
+      toggleImg(
+        button,
+        "/assets/header/moon.svg",
+        "Lune",
+        "Passer au thème sombre"
+      );
+      toggleImg(linkedin, "/assets/footer/linkedin-light-mode.svg");
 
-      lightMode(element);
+      toggleTheme(element, "dark-mode", "light-mode");
 
       // Other functions
-      darkModeImg();
-      lightModeMenuBurger();
+      toggleModeImg("light-mode", "dark-mode");
+      toggleModeMenuBurger("black");
       displayProjects(projectsFilter);
+      displayModal();
     } else if (element.classList.contains("light-mode")) {
-      toggleTheme = "dark-mode";
+      toggleThemeClass = "dark-mode";
 
-      // Change button
-      button.src = "/assets/header/sun.svg";
-      button.alt = "Soleil";
-      button.title = "Passer au thème clair";
+      // Change img
+      toggleImg(
+        button,
+        "/assets/header/sun.svg",
+        "Soleil",
+        "Passer au thème clair"
+      );
 
-      darkMode(element);
+      toggleImg(linkedin, "/assets/footer/linkedin-dark-mode.svg");
+
+      toggleTheme(element, "light-mode", "dark-mode");
 
       // Other functions
-      lightModeImg();
-      darkModeMenuBurger();
+      toggleModeImg("dark-mode", "light-mode");
+      toggleModeMenuBurger("white");
       displayProjects(projectsFilter);
+      displayModal();
     }
   });
 });

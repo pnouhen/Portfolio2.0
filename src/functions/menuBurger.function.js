@@ -33,10 +33,6 @@ if (window.innerWidth <= 1024) {
   });
 }
 
-export const darkModeMenuBurger = () => {
-  imgBurger.src = "/assets/icons/header/bars-solid-white.svg";
-};
-
-export const lightModeMenuBurger = () => {
-  imgBurger.src = "/assets/icons/header/bars-solid-black.svg";
+export const toggleModeMenuBurger = (color) => {
+  imgBurger.src = `/assets/header/bars-solid-${color}.svg`;
 };

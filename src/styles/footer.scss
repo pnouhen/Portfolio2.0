@@ -11,7 +11,7 @@ footer {
     gap: 0.5rem;
 
     p,
-    a {
+    a, img {
       @include fontFamilyOtherText;
       @include fontColorText;
     }
