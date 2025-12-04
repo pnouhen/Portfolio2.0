@@ -73,17 +73,27 @@ export const projectsData = [
 
       {
         title: "Objectif",
-        text: "",
+        text: "Moderniser mon portfolio tout en mettant en avant mon projet personnel et mes compétences en développement web.",
       },
 
       {
         title: "Fonctionnalité",
-        text: "",
+        list: [
+          "Toggle de thème interactif",
+          "Navigation dynamique",
+          "Filtrage des projets",
+          "Affichage dynamique des projets",
+          "Modale de détails des projets",
+          "Affichage dynamique des compétences",
+        ],
       },
 
       {
         title: "Ce que j'ai appris",
-        text: "",
+        list: [
+          "Gestion du Toggle de thème interactif",
+          "Création d'une navigation dynamique",
+        ],
       },
     ],
   },

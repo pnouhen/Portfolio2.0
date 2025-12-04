@@ -2,13 +2,13 @@ import { projectsData } from "../datas/projects.data";
 import { displayModal } from "./project-modal.function";
 import { displayProjects } from "./projects.function";
 
-     export let projectsFilter = projectsData;
+export let projectsFilter = projectsData;
 
 const filters = document.querySelectorAll("button");
 
 // Initialization
 displayProjects(projectsData);
-displayModal()
+displayModal();
 
 filters.forEach((filter) => {
   filter.addEventListener("click", () => {
@@ -21,16 +21,20 @@ filters.forEach((filter) => {
       // Filter project
       const stacks = ["front-end", "full-stack"];
 
-      stacks.forEach((category) => {
-        if (filter.classList.contains(category)) {
-          projectsFilter = projectsData.filter(
-            (projet) => projet.stack === category
-          );
-        }
-      });
+      if (filter.classList.contains("all-project")) {
+        projectsFilter = projectsData;
+      } else {
+        stacks.forEach((category) => {
+          if (filter.classList.contains(category)) {
+            projectsFilter = projectsData.filter(
+              (projet) => projet.stack === category
+            );
+          }
+        });
+      }
 
       displayProjects(projectsFilter);
-      displayModal()
+      displayModal();
     }
   });
 });
