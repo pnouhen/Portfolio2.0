@@ -116,6 +116,7 @@
 
           img {
             height: 4rem;
+            @include widthSkills;
 
             @media (max-width: 768px) {
               height: 3rem;

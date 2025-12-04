@@ -41,3 +41,9 @@
 @mixin fontSizeOtherText {
   font-size: 1.25rem;
 }
+
+@mixin widthSkills {
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+}

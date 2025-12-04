@@ -33,7 +33,7 @@
       li {
         img {
           height: 2rem;
-          max-width: 100%;
+          @include widthSkills;
 
           @media (max-width: 1024px) {
             height: 1.875rem;
@@ -42,13 +42,6 @@
           @media (max-width: 768px) {
             height: 1.5rem;
           }
-        }
-
-        .rest-api,
-        .github,
-        .express-js {
-          padding: 0.25rem;
-          background-color: white;
         }
       }
     }

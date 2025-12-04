@@ -1,7 +1,7 @@
 @use "./mixins" as *;
 
 footer {
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -29,6 +29,7 @@ footer {
       img {
         margin-bottom: 0.2rem;
         height: 0.875rem;
+        aspect-ratio: 1;
       }
 
       span {
@@ -38,6 +39,7 @@ footer {
   }
 
   .linkedin {
+    display: flex;
     img {
       width: 2rem;
       aspect-ratio: 1;
