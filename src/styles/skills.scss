@@ -30,7 +30,7 @@
       column-gap: 4rem;
       row-gap: 3rem;
       li {
-        @include widthSkills;
+        @include skills;
       }
     }
   }
