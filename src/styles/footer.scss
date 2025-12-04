@@ -1,0 +1,46 @@
+@use "./mixins" as *;
+
+footer {
+  padding-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  div {
+    display: flex;
+    gap: 0.5rem;
+
+    p,
+    a {
+      @include fontFamilyOtherText;
+      @include fontColorText;
+    }
+
+    p {
+      font-weight: bold;
+    }
+
+    a {
+      display: flex;
+      align-items: flex-end;
+      gap: 0.25rem;
+      text-decoration: none;
+
+      img {
+        margin-bottom: 0.2rem;
+        height: 0.875rem;
+      }
+
+      span {
+        font-size: 0.875rem;
+      }
+    }
+  }
+
+  .linkedin {
+    img {
+      width: 2rem;
+      aspect-ratio: 1;
+    }
+  }
+}

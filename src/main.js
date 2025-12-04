@@ -6,6 +6,7 @@ import "./styles/about.scss";
 import "./styles/projects.scss";
 import "./styles/project-modal.scss";
 import "./styles/skills.scss"
+import "./styles/footer.scss"
 
 // JS
 import "./functions/project-filter.function"
