@@ -1,6 +1,7 @@
 import { toggleThemeImages } from "./toggleTheme-img.function";
 import { toggleThemeImagesProject } from "./projects.function";
 import { toggleModeMenuBurger } from "./menuBurger.function";
+import { toggleIconProjectModal } from "./project-modal-container-close.function";
 
 const themeToggleButton = document.querySelector(".toggle-theme");
 
@@ -28,11 +29,13 @@ themeToggleButton.addEventListener("click", (e) => {
       toggleThemeElement(element, "dark-mode", "light-mode");
       toggleThemeImages("light");
       toggleThemeImagesProject("light-mode", "dark-mode");
+      toggleIconProjectModal("light-mode");
       toggleModeMenuBurger("light");
     } else if (element.classList.contains("light-mode")) {
       toggleThemeImages("dark");
       toggleThemeElement(element, "light-mode", "dark-mode");
       toggleThemeImagesProject("dark-mode", "light-mode");
+      toggleIconProjectModal("dark-mode");
       toggleModeMenuBurger("dark");
     }
   });
