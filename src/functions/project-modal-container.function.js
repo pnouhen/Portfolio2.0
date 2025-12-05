@@ -1,21 +1,21 @@
 import { closeModal } from "./project-modal-container-close.function";
 import { softSkillsData } from "../datas/softSkills.data";
 
-export function projectModalContainer(modal, container, toggleTheme, project) {
-  closeModal(modal, container, toggleTheme)
+export function projectModalContainer(modal, container, modeTheme, project) {
+  closeModal(modal, container, modeTheme)
 
   const modalBody = document.createElement("div")
-  modalBody.classList.add("modal-body", toggleTheme)
+  modalBody.classList.add("modal-body", modeTheme)
   container.appendChild(modalBody)
 
   const title = document.createElement("h3");
   title.textContent = project.title;
-  title.classList.add(toggleTheme);
+  title.classList.add(modeTheme);
   modalBody.appendChild(title);
 
   const description = document.createElement("p");
   description.textContent = project.description;
-  description.classList.add("description", toggleTheme);
+  description.classList.add("description", modeTheme);
   modalBody.appendChild(description);
 
   //   Details
@@ -26,13 +26,13 @@ export function projectModalContainer(modal, container, toggleTheme, project) {
 
     const titleDetail = document.createElement("h4");
     titleDetail.textContent = detail.title + " :";
-    titleDetail.classList.add(toggleTheme);
+    titleDetail.classList.add(modeTheme);
     div.appendChild(titleDetail);
 
     if (detail.text) {
       const text = document.createElement("p");
       text.textContent = detail.text;
-      text.classList.add(toggleTheme);
+      text.classList.add(modeTheme);
       div.appendChild(text);
     } else if (detail.list) {
       const ul = document.createElement("ul");
@@ -41,7 +41,7 @@ export function projectModalContainer(modal, container, toggleTheme, project) {
       detail.list.forEach((el) => {
         const li = document.createElement("li");
         li.textContent = el;
-        li.classList.add("text",toggleTheme);
+        li.classList.add("text",modeTheme);
         ul.appendChild(li);
       });
     } else if (detail.softSkills) {
@@ -57,7 +57,7 @@ export function projectModalContainer(modal, container, toggleTheme, project) {
         img.src = skill.img;
         img.alt = `Icone de : ${skill.name}`;
         img.title = skill.name;
-        img.classList.add(toggleTheme);
+        img.classList.add(modeTheme);
         li.appendChild(img);
       };
 

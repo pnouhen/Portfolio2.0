@@ -1,21 +1,21 @@
 const header = document.querySelector("header");
 
-export function closeModal(modal, container, toggleTheme) {
+export function closeModal(modal, container, modeTheme) {
   const div = document.createElement("div");
-  div.classList.add("close-modal", toggleTheme);
+  div.classList.add("close-modal", modeTheme);
   container.appendChild(div);
 
-  const img = document.createElement("img");
+  const iconClose = document.createElement("img");
 
-  if (toggleTheme === "dark-mode") {
-    img.src = "/assets/projects/icons/close-dark-mode.svg";
-  } else if (toggleTheme === "light-mode") {
-    img.src = "/assets/projects/icons/close-light-mode.svg";
+  if (modeTheme === "dark-mode") {
+    iconClose.src = "/assets/projects/icons/close-dark-mode.svg";
+  } else if (modeTheme === "light-mode") {
+    iconClose.src = "/assets/projects/icons/close-light-mode.svg";
   }
 
-  img.alt = "Icon pour fermer la modale";
-  img.classList.add(toggleTheme);
-  div.appendChild(img);
+  iconClose.alt = "Icon pour fermer la modale";
+  iconClose.classList.add(modeTheme);
+  div.appendChild(iconClose);
 
   const close = () => {
     modal.classList.remove("active");
@@ -25,7 +25,7 @@ export function closeModal(modal, container, toggleTheme) {
     }, 400);
   };
 
-  img.addEventListener("click", close);
+  iconClose.addEventListener("click", close);
   header.addEventListener("click", close);
 
   if (window.innerWidth >= 768) modal.addEventListener("click", close);

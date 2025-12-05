@@ -1,6 +1,6 @@
 import { projectsData } from "../datas/projects.data";
 import { projectModalContainer } from "./project-modal-container.function";
-import {  toggleThemeClass } from "./toggleTheme.function";
+import { modeTheme } from "./toggleTheme.function";
 
 export function displayModal() {
   const project = document.getElementById("projects");
@@ -15,7 +15,7 @@ export function displayModal() {
       );
 
       const modal = document.createElement("div");
-      modal.classList.add("modalProject", toggleThemeClass);
+      modal.classList.add("modalProject", modeTheme);
       document.body.appendChild(modal);
 
       // Animation for the modal
@@ -24,32 +24,10 @@ export function displayModal() {
       }, 10);
 
       const modalContainer = document.createElement("div");
-      modalContainer.classList.add("modal_container", toggleThemeClass);
+      modalContainer.classList.add("modal_container", modeTheme);
       modal.appendChild(modalContainer);
 
-      projectModalContainer(modal, modalContainer, toggleThemeClass, data);
-
-      // Toggle theme
-      const buttonToggleTheme = document.querySelector(".toggle-theme");
-      const allElements = modal.querySelectorAll(toggleThemeClass);
-      const closeModalImg = document.querySelector(".close-modal img");
-      buttonToggleTheme.addEventListener("click", () => {
-        allElements.forEach((element) => {
-          if (toggleTheme === "dark-mode") {
-            toggleTheme(modal, "light-mode", "dark-mode");
-            toggleTheme(element, "light-mode", "dark-mode");
-
-            // Close Modal
-            closeModalImg.src = "/assets/projects/icons/close-dark-mode.svg";
-          } else if (toggleTheme === "light-mode") {
-            toggleTheme(modal, "dark-mode", "light-mode");
-            toggleTheme(element, "dark-mode", "light-mode");
-
-            // Close Modal
-            closeModalImg.src = "/assets/projects/icons/close-light-mode.svg";
-          }
-        });
-      });
+      projectModalContainer(modal, modalContainer, modeTheme, data);
     });
   });
 }

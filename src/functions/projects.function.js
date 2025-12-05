@@ -1,5 +1,4 @@
 import { projectsData } from "../datas/projects.data";
-import { toggleThemeClass } from "./toggleTheme.function";
 
 export function displayProjects(projects) {
   const section = document.getElementById("projects");
@@ -15,15 +14,15 @@ export function displayProjects(projects) {
 
     // Image
     const imgProject = document.createElement("img");
-    imgProject.classList.add("imgProject", toggleThemeClass);
+    imgProject.classList.add("imgProject", "dark-mode");
     imgProject.src = project.img;
     imgProject.alt = `Illustration de ${project.title}`;
-    imgProject.loading="lazy"
+    imgProject.loading = "lazy";
     article.appendChild(imgProject);
 
     // Text
     const text = document.createElement("p");
-    text.classList.add("text", toggleThemeClass);
+    text.classList.add("text", "dark-mode");
     const strong = document.createElement("strong");
     strong.textContent = project.title;
     text.appendChild(strong);
@@ -34,7 +33,7 @@ export function displayProjects(projects) {
     const stack = document.createElement("p");
     stack.textContent =
       project.stack.charAt(0).toUpperCase() + project.stack.slice(1);
-    stack.classList.add("stack", toggleThemeClass);
+    stack.classList.add("stack", "dark-mode");
     article.appendChild(stack);
 
     // All link elements
@@ -53,9 +52,9 @@ export function displayProjects(projects) {
     imgLinkWebSite.src = "/assets/projects/icons/link-project.svg";
     const textimgLinkWebSite = `Acceder au site : ${project.title}`;
     imgLinkWebSite.alt = textimgLinkWebSite;
-    imgLinkWebSite.classList.add(toggleThemeClass);
+    imgLinkWebSite.classList.add("dark-mode");
     imgLinkWebSite.title = textimgLinkWebSite;
-    imgLinkWebSite.loading="lazy"
+    imgLinkWebSite.loading = "lazy";
     linkWebsite.appendChild(imgLinkWebSite);
 
     // Link for GitHub
@@ -69,26 +68,25 @@ export function displayProjects(projects) {
     imgLinkGitHub.src = "/assets/soft-skills/outils/github.svg";
     const textimgLinkGitHub = `Acceder au GitHub : ${project.title}`;
     imgLinkGitHub.alt = textimgLinkGitHub;
-    imgLinkGitHub.classList.add(toggleThemeClass);
+    imgLinkGitHub.classList.add("dark-mode");
     imgLinkGitHub.title = textimgLinkGitHub;
-    imgLinkGitHub.loading="lazy"
+    imgLinkGitHub.loading = "lazy";
     linkGitHub.appendChild(imgLinkGitHub);
 
     // Link for more details
     const details = document.createElement("button");
     details.dataset.id = project.id;
-    details.classList.add("details", toggleThemeClass);
+    details.classList.add("details", "dark-mode");
     details.textContent = "En savoir plus";
     linkDiv.appendChild(details);
   });
 }
 
-export const toggleModeImg = (modeInitial, modeReplace) => {
+export const toggleThemeImagesProject = (modeInitial, modeReplace) => {
   const toggleImg = projectsData.filter(
     (project) => project.toggleImg === true
   );
-
-  if (toggleImg.toggleImg) {
+  if (toggleImg.length > 0) {
     toggleImg.forEach((project) => {
       const img = document.querySelector(`#${project.id} .imgProject`);
       img.src = project.img.replace(modeInitial, modeReplace);
