@@ -13,13 +13,16 @@ export function closeModal(modal, container, modeTheme) {
   div.classList.add("close-modal", modeTheme);
   container.appendChild(div);
 
+  const button = document.createElement("button");
+  div.appendChild(button);
+
   const iconClose = document.createElement("img");
 
   toggleIconTheme(modeTheme, iconClose);
 
   iconClose.alt = "Icon pour fermer la modale";
   iconClose.classList.add(modeTheme);
-  div.appendChild(iconClose);
+  button.appendChild(iconClose);
 
   const close = () => {
     modal.classList.remove("active");
