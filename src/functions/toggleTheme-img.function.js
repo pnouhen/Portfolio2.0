@@ -13,6 +13,7 @@ export function toggleThemeImages(mode) {
 
   elementsWithImages.forEach((item) => {
     const matchingImage = item.images.find((item) => item.mode === mode);
+
     item.element.src = matchingImage.src;
     if (item.element.alt) item.element.alt = matchingImage.alt;
     if (item.element.title) item.element.alt = matchingImage.title;

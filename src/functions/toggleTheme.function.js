@@ -7,8 +7,12 @@ const themeToggleButton = document.querySelector(".toggle-theme");
 
 export let modeTheme = "dark-mode";
 
-export function toggleThemeElement(element, remove, add) {
-  element.style.transition = "all 0.4s ease-in-out";
+// Transition management
+const durationTransition = 400;
+const durationTransitionImg = durationTransition - 200;
+
+function toggleThemeElement(element, remove, add) {
+  element.style.transition = `all ${durationTransition}ms ease-in-out`;
   element.classList.remove(remove);
   element.classList.add(add);
 }
@@ -27,16 +31,24 @@ themeToggleButton.addEventListener("click", (e) => {
 
     if (element.classList.contains("dark-mode")) {
       toggleThemeElement(element, "dark-mode", "light-mode");
-      toggleThemeImages("light");
-      toggleThemeImagesProject("light-mode", "dark-mode");
-      toggleIconProjectModal("light-mode");
-      toggleModeMenuBurger("light");
+
+      // Change images
+      setTimeout(() => {
+        toggleThemeImages("light");
+        toggleThemeImagesProject("light-mode", "dark-mode");
+        toggleIconProjectModal("light-mode");
+        toggleModeMenuBurger("light");
+      }, durationTransitionImg);
     } else if (element.classList.contains("light-mode")) {
-      toggleThemeImages("dark");
       toggleThemeElement(element, "light-mode", "dark-mode");
-      toggleThemeImagesProject("dark-mode", "light-mode");
-      toggleIconProjectModal("dark-mode");
-      toggleModeMenuBurger("dark");
+
+      // Change images
+      setTimeout(() => {
+        toggleThemeImages("dark");
+        toggleThemeImagesProject("dark-mode", "light-mode");
+        toggleIconProjectModal("dark-mode");
+        toggleModeMenuBurger("dark");
+      }, durationTransitionImg);
     }
   });
 });
