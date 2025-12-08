@@ -28,7 +28,7 @@ export function closeModal(modal, container, modeTheme) {
     modal.classList.remove("active");
     setTimeout(() => {
       modal.remove();
-      document.body.style.overflow = "scroll";
+      document.body.style.overflowY = "scroll";
     }, 400);
   };
 
