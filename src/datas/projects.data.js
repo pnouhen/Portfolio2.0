@@ -37,7 +37,7 @@ export const projectsData = [
       {
         title: "Fonctionnalité",
         list: [
-          " Authentification JWT (client / admin)",
+          "Authentification JWT (client / admin)",
           "Production de fichiers PDF",
           "API CRUD complète (recettes, utilisateurs, paiements)",
           "Interface admin : ajout, modification et suppression de recettes, changement des prix des consultations",
@@ -48,7 +48,7 @@ export const projectsData = [
       {
         title: "Ce que j'ai appris",
         list: [
-          " Gestion d’un projet full-stack complet",
+          "Gestion d’un projet full-stack complet",
           "Création d’une API sécurisée avec authentification",
           "Consolidation des hooks et contextes React",
         ],
@@ -62,13 +62,20 @@ export const projectsData = [
     toggleImg: false,
     title: "Réserves Naturelles France",
     description: "Carte dynamique avec filtres et détails",
-    stack: "front-end",
+    stack: "full-stack",
     linkWebSite: "https://pierre-nouhen-create-map-interactive.vercel.app/",
     linkGitHub: "https://github.com/pnouhen/Create-Map-Interactive",
     details: [
       {
         title: "Stack",
-        softSkills: ["JavaScript", "Tailwind", "Vite"],
+        softSkills: [
+          "JavaScript",
+          "Vite",
+          "Tailwind",
+          "Node.js",
+          "Express",
+          "MongoDB",
+        ],
         otherSoftSkills: [
           { img: "/assets/projects/icons/leaflet.webp", name: "Leaflet" },
           { img: "/assets/projects/icons/turf-js.svg", name: "Turf.js" },
@@ -89,6 +96,7 @@ export const projectsData = [
           "Filtres par département, région, zone circulaire cliquée ou surface calculée",
           "Affichage précis des réserves via polygones sur une carte interactive",
           "UI optimisée et responsive",
+          "Mise en place d’un serveur pour assurer l’autonomie dans la récupération et la gestion des données.",
         ],
       },
 
