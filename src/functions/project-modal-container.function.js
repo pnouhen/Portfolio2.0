@@ -36,6 +36,7 @@ export function projectModalContainer(modal, container, modeTheme, project) {
       div.appendChild(text);
     } else if (detail.list) {
       const ul = document.createElement("ul");
+      ul.classList.add("list-text")
       div.appendChild(ul);
 
       detail.list.forEach((el) => {

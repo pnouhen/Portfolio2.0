@@ -1,10 +1,80 @@
 export const projectsData = [
   {
+    id: "equilibrio",
+    img: "/assets/projects/img/equilibrio.webp",
+    toggleImg: false,
+    title: "Equilibrio",
+    description:
+      "Application web Angular pour la gestion d’une association de capoeira",
+    stack: "front-end",
+    linkWebSite: "https://pierre-nouhen-equilibrio.vercel.app/",
+    linkGitHub: "https://github.com/pnouhen/Equilibrio/tree/main/front-end",
+    details: [
+      {
+        title: "Stack",
+        softSkills: ["Angular", "Vite", "TypeScript", "SASS"],
+        otherSoftSkills: [
+          { img: "/assets/projects/icons/jwt.webp", name: "JWT" },
+          { img: "/assets/projects/icons/pdfjs.webp", name: "PDFjs" },
+        ],
+      },
+
+      {
+        title: "Objectif",
+        text: "Découvrir et pratiquer Angular et TypeScript à travers le développement d’un site web responsive pour une association de capoeira, avec une gestion des rôles (adhérent, professeur, administrateur).",
+      },
+
+      {
+        title: "Fonctionnalités",
+        list: [
+          "Slideshow automatique sur la page d’accueil",
+          "Sélection d’une ville avec génération de pages dynamiques",
+          "Formulaire de contact",
+          "Authentification avec gestion des rôles (adhérent, professeur, administrateur)",
+          "Dashboard adhérent (PDF, vidéos YouTube, chansons avec paroles et audio)",
+          "Changement du membre actif depuis le header",
+          "Espace professeur : accès aux membres, planning et gestion des présences",
+          "Espace administrateur : gestion du contenu (carousel, entraînements, lieux, horaires, adhérents, ressources)",
+          "Prévisualisation avant validation des modifications",
+          "Site responsive et déployé",
+        ],
+      },
+
+      {
+        title: "Ce que j'ai appris",
+        list: [
+          "Bases et fonctionnement du framework Angular",
+          "Utilisation de TypeScript dans un projet concret",
+          "Mise en place d’un routing Angular",
+          "Utilisation des services pour centraliser les données",
+          "Création et utilisation de models",
+          "Utilisation des signals Angular",
+          "Gestion d’un dashboard avec rôles utilisateurs",
+          "Structuration d’une application front-end",
+          "Intégration de contenus externes (PDF, vidéos YouTube)",
+          "Création d’un site responsive",
+          "Déploiement d’une application Angular",
+        ],
+      },
+
+      {
+        title: "Améliorations prévues",
+        list: [
+          "Mise en place du serveur PHP",
+          "Création de la base de données MySQL",
+          "Migration des données du front-end vers le backend",
+        ],
+      },
+    ],
+  },
+
+  {
     id: "ambrineNutri",
     img: "/assets/projects/img/ambrineNutri.webp",
     toggleImg: false,
     title: "Ambrine Nutri",
-    description: "Vitrine interactive et boutique de recettes nutrition",
+    description:
+      "Application web React avec Node.js et MongoDB pour une nutritionniste",
     stack: "full-stack",
     linkWebSite: "https://pierrenouhen-ambrine-nutri.vercel.app/",
     linkGitHub: "https://github.com/pnouhen/AmbrineNutri",
@@ -20,7 +90,7 @@ export const projectsData = [
           "MongoDB",
         ],
         otherSoftSkills: [
-          { img: "/assets/projects/icons/jwt.webp", name: "JWT" },
+          { img: "/assets/projects/icons/leaflet.webp", name: "Leaflet" },
           { img: "/assets/projects/icons/pdfkit.webp", name: "Pdfkit" },
           { img: "/assets/projects/icons/buffer.webp", name: "Buffer" },
           { img: "/assets/projects/icons/canvas.webp", name: "Canvas" },
@@ -35,7 +105,7 @@ export const projectsData = [
       },
 
       {
-        title: "Fonctionnalité",
+        title: "Fonctionnalités",
         list: [
           "Authentification JWT (client / admin)",
           "Production de fichiers PDF",
@@ -61,7 +131,8 @@ export const projectsData = [
     img: "/assets/projects/img/carte-interactive.webp",
     toggleImg: false,
     title: "Réserves Naturelles France",
-    description: "Carte dynamique avec filtres et détails",
+    description:
+      "Carte interactive des réserves naturelles françaises avec filtres (JS, Node.js, MongoDB)",
     stack: "full-stack",
     linkWebSite: "https://pierre-nouhen-create-map-interactive.vercel.app/",
     linkGitHub: "https://github.com/pnouhen/Create-Map-Interactive",
@@ -89,7 +160,7 @@ export const projectsData = [
       },
 
       {
-        title: "Fonctionnalité",
+        title: "Fonctionnalités",
         list: [
           "Recherche de réserves naturelles par nom",
           "Affichage des distances entre points",
@@ -118,7 +189,8 @@ export const projectsData = [
     toggleImg: true,
     title: "Mon Portfolio",
     stack: "front-end",
-    description: "Site interactif moderne avec Dark/Light toggle",
+    description:
+      "Site web interactif avec Dark/Light toggle et filtrage des projets (JS, SASS, Vite)",
     linkWebSite: "https://pierre-nouhen-portfolio.vercel.app/",
     linkGitHub: "",
     details: [
@@ -133,7 +205,7 @@ export const projectsData = [
       },
 
       {
-        title: "Fonctionnalité",
+        title: "Fonctionnalités",
         list: [
           "Toggle de thème interactif",
           "Navigation dynamique",

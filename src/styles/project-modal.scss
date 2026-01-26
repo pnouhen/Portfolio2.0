@@ -108,6 +108,13 @@
           font-weight: 600;
         }
 
+        li {
+          &.text {
+            margin-left: 2.25rem;
+            @include fontSizeOtherText;
+          }
+        }
+
         .skills {
           margin-left: 1rem;
           display: flex;
@@ -134,11 +141,10 @@
           }
         }
 
-        li {
-          &.text {
-            margin-left: 2.25rem;
-            @include fontSizeOtherText;
-          }
+        .list-text {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
         }
 
         p {
